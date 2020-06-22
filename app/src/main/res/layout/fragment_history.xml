@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.HistoryFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:minHeight="?attr/actionBarSize">
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbar_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:minHeight="?attr/actionBarSize"
+                app:theme="@style/AppTheme">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Riwayat"
+                    android:gravity="center"
+                    android:layout_marginEnd="@dimen/default_margin_small"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/font_size_16"/>
+
+                <ImageView
+                    android:id="@+id/toolbar_title"
+                    android:layout_width="@dimen/default_ic_size_medium"
+                    android:layout_height="@dimen/default_ic_size_medium"
+                    style="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
+                    android:src="@drawable/winputih"
+                    android:layout_marginEnd="@dimen/default_margin_small"
+                    android:layout_gravity="end"/>
+            </com.google.android.material.appbar.MaterialToolbar>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@android:color/white">
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tab_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:background="@android:color/white"
+                app:tabGravity="fill"
+                app:tabTextAppearance="@style/tab_text_appereance"
+                app:tabSelectedTextColor="@color/colorPrimary"
+                app:tabTextColor="@android:color/black"
+                app:tabIndicatorColor="@color/colorPrimary"
+                app:tabMode="fixed" />
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/view_pager"
+                android:layout_marginStart="@dimen/default_margin_small"
+                android:layout_marginEnd="@dimen/default_margin_small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>
